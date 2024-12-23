@@ -37,6 +37,12 @@ public static void main(String[] args) {
                 biblio.recherche(isbnRecherche);
                 break;
             case 4:
+                System.out.print("Entrer l'ISBN du livre à supprimer: ");
+                String isbnSupprimer = scanner.nextLine();
+                biblio.supprimer(isbnSupprimer);
+                break;
+            case 5:
+                
                 System.out.println("Au revoir!");
                 exit = false; // Mettre exit à false pour sortir de la boucle
                 break;

@@ -27,10 +27,19 @@ public class Bibliotheque {
         return null;
     }
 
-
+    public void supprimer(String isbn) {
+        for (int i = 0; i < livres.size(); i++) {
+            if (livres.get(i).getIsbn().equals(isbn)) {
+                livres.remove(i);
+                System.out.println("Le liver avec l'ISBN" + isbn + "a été supprimé");
+                return ;
+            }
+            System.out.println("Aucun livre à ce ISBN :" + isbn);
+            return ;
+        }
 
 
     }
 
-
+}
 
