@@ -26,20 +26,29 @@ public class Bibliotheque {
         System.out.println("Aucun livre trouvé avec  ce ISBN :" + isbn);
         return null;
     }
-
     public void supprimer(String isbn) {
         for (int i = 0; i < livres.size(); i++) {
             if (livres.get(i).getIsbn().equals(isbn)) {
                 livres.remove(i);
-                System.out.println("Le liver avec l'ISBN" + isbn + "a été supprimé");
+                System.out.println("Le liver avec l'ISBN  " + isbn + "  a été supprimé ");
                 return ;
             }
             System.out.println("Aucun livre à ce ISBN :" + isbn);
             return ;
         }
-
-
     }
 
+    public void modifier(String isbn, String nouveauTitre, String nouvelAuteur, boolean nouvelleDisponibilite) {
+        for (Livre livre : livres) {
+            if (livre.getIsbn().equals(isbn)) {
+                livre.setTitre(nouveauTitre);
+                livre.setAuteur(nouvelAuteur);
+                livre.setDisponibilite(nouvelleDisponibilite);
+                System.out.println("Le livre avec l'ISBN " + isbn + " a été modifié.");
+                return;
+            }
+        }
+        System.out.println("Aucun livre trouvé avec cet ISBN : " + isbn);
+    }
 }
 

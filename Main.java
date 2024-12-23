@@ -42,7 +42,22 @@ public static void main(String[] args) {
                 biblio.supprimer(isbnSupprimer);
                 break;
             case 5:
-                
+                System.out.print("Entrer l'ISBN du livre à modifier: ");
+                String isbnModifier = scanner.nextLine();
+
+                System.out.print("Entrez le nouveau titre: ");
+                String nouveauTitre = scanner.nextLine();
+
+                System.out.print("Entrez le nouvel auteur: ");
+                String nouvelAuteur = scanner.nextLine();
+
+                System.out.print("Disponible (1-oui/2-non): ");
+                int choixDisponibilite = scanner.nextInt();
+                boolean nouvelleDisponibilite = (choixDisponibilite == 1);
+
+                biblio.modifier(isbnModifier, nouveauTitre, nouvelAuteur, nouvelleDisponibilite);
+                break;
+            case 6:
                 System.out.println("Au revoir!");
                 exit = false; // Mettre exit à false pour sortir de la boucle
                 break;

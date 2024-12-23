@@ -22,16 +22,32 @@ class Livre {
         return titre;
     }
 
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
     public String getAuteur() {
         return auteur;
+    }
+
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
     }
 
     public String getIsbn() {
         return isbn;
     }
 
-    public boolean estdisponibilite() {
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public boolean isDisponibilite() {
         return disponibilite;
+    }
+
+    public void setDisponibilite(boolean disponibilite) {
+        this.disponibilite = disponibilite;
     }
 }
 
