@@ -17,19 +17,12 @@ public static void main(String[] args) {
 
         switch (CH) {
             case 1:
-                System.out.print("Entrez le titre: ");
-                String titre = scanner.nextLine();
-                System.out.print("Entrez l'auteur: ");
-                String auteur = scanner.nextLine();
-                System.out.print("Entrez l'ISBN: ");
-                String ISBN = scanner.nextLine();
-                System.out.print("Disponible (1-oui/2-non): ");
-                int ch = scanner.nextInt();
-                boolean disponibilite = (ch == 1);
-                biblio.ajouter(titre, auteur, ISBN, disponibilite);
+                biblio.ajouter();
                 break;
             case 2:
-                biblio.afficher();
+                for (Livre livre :biblio.afficher() ) {
+           System.out.println(livre);
+      }
                 break;
             case 3:
                 System.out.print("Entrer l'ISBN du livre à rechercher: ");

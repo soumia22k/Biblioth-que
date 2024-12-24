@@ -13,6 +13,9 @@ class Livre {
         this.disponibilite = disponibilite;
     }
 
+    public Livre() {
+    }
+
     @Override
     public String toString() {
         return "Titre: " + titre + ", Auteur: " + auteur + ", ISBN: " + isbn + ", Disponible: " + (disponibilite ? "Oui" : "Non");
